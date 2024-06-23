@@ -1,9 +1,6 @@
 import { LoaderFunctionArgs, json, type MetaFunction } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import { DataAPIClient } from '@datastax/astra-db-ts';
-import OpenAI from 'openai';
-
-import classes from './index.module.css';
 
 export const meta: MetaFunction = () => {
 	return [
@@ -68,7 +65,7 @@ export default function Index() {
 
 	return (
 		<>
-			<div className={classes.video}>
+			<div className="video">
 				<iframe
 					width="560"
 					height="315"
@@ -84,10 +81,10 @@ export default function Index() {
 			</div>
 
 			<h2>Related Episodes</h2>
-			<aside className={classes.related}>
+			<aside className="related">
 				{related.slice(0, 3).map((relEp) => {
 					return (
-						<div key={relEp.slug} className={classes.episode}>
+						<div key={relEp.slug} className="episode">
 							<img
 								src={`https://www.learnwithjason.dev/${relEp.slug}/w_600/poster.jpg`}
 								alt={relEp.title}

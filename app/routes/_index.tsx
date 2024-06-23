@@ -4,8 +4,6 @@ import { DataAPIClient } from '@datastax/astra-db-ts';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import OpenAI from 'openai';
 
-import classes from './index.module.css';
-
 const splitter = new RecursiveCharacterTextSplitter({
 	chunkSize: 512,
 	chunkOverlap: 100,
